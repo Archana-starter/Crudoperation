@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pressing Management System</title>
+</head>
+<body>
+    <div id="authSection" class="auth-container">
+        <h2 id="authTitle">Sign Up</h2>
+        <form id="authForm">
+            <input type="email" id="authEmail" placeholder="Email" required>
+            <input type="password" id="authPassword" placeholder="Password" required>
+            <input type="password" id="confirmPassword" class="hidden" placeholder="Confirm Password" required>
+            <button type="submit">Submit</button>
+            <p>
+                <a href="#" id="toggleLink">Already have an account? Login</a>
+            </p>
+        </form>
+    </div>
+    
+    <div id="mainContent" style="display: none;">
+        <header>
+            <h1>Ironing Shop</h1>
+            <nav>
+                <a href="#" id="homeLink">Home</a>
+                <a href="#" id="orderLink">Place Order</a>
+                <a href="#" id="trackLink">Tracking</a>
+                <a href="#" id="logoutLink">Logout</a>
+            </nav>
+        </header>
+
+        <div id="homeSection">
+            <h2>Welcome to the Shop</h2>
+            <p>"Believe is Believe"</p>
+            <div id="shopInfo" class="hidden">
+                <h3>Company Details</h3>
+                <p>Name: Ironing Shop</p>
+                <p>Location: City Center</p>
+                <p>Contact: 123-456-7890</p>
+                <p>Since: 2024</p>
+                <p>Achievements: Best Pressing Service</p>
+            </div>
+            <button id="showShopDetails">Show Company Details</button>
+        </div>
+
+        <div id="orderSection" style="display: none;">
+            <form id="orderForm">
+                <input type="text" id="orderName" placeholder="Your Name" required>
+                <input type="text" id="orderLocation" placeholder="Your Location" required>
+                <input type="number" id="clothesCount" placeholder="Clothes Count" required>
+                <input type="date" id="orderDate" required>
+                <button type="submit">Submit Order</button>
+            </form>
+            <div id="orderConfirmation" style="display: none;">Thank you for your order!</div>
+        </div>
+
+        <div id="trackSection" style="display: none;">
+            <h2>Your Orders</h2>
+            <div id="orderList"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
